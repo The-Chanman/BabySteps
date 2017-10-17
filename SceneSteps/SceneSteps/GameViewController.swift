@@ -10,7 +10,7 @@ import UIKit
 //import QuartzCore
 import SceneKit
 
-let experiment = "Honor"
+let experiment = "Cone"
 
 class GameViewController: UIViewController {
 
@@ -28,7 +28,7 @@ class GameViewController: UIViewController {
             cone.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape.init(geometry: SCNCone(topRadius: 0, bottomRadius: 0.5, height: 1), options: nil))
             let plane = scene.rootNode.childNode(withName: "plane", recursively: false)!
             plane.physicsBody = SCNPhysicsBody(type: .static, shape: SCNPhysicsShape.init(geometry: SCNPlane(width: 10, height: 10), options: nil))
-            plane.eulerAngles = SCNVector3Make(.pi * 0.5, 0, 0)
+            plane.eulerAngles = SCNVector3Make(.pi * 1.5, 0, 0)
             plane.geometry?.firstMaterial?.diffuse.contents = "floor"
             plane.geometry?.firstMaterial?.diffuse.contentsTransform = SCNMatrix4MakeScale(2, 2, 1)
             plane.geometry?.firstMaterial?.diffuse.wrapT = .mirror
